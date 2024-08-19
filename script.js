@@ -27,6 +27,10 @@ btn.addEventListener("click", () => {
         `;
         sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`)
     })
+    .catch((err) => {
+        console.log(err)
+        result.innerHTML = `<h3>Word Not Found</h3>`
+    })
 });
 
 function playSound() {
